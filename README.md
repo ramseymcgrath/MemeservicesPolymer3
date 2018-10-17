@@ -180,4 +180,8 @@ To deploy the app to your own Firebase project:
 
     ```
     firebase deploy
-    ```
+   ```
+
+## Docker Container
+
+A Dockerfile is provided to build and host the application locally as well, exposing port 8081
