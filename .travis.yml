@@ -26,7 +26,7 @@ addons:
       name: "ramseymcgrath/MemeservicesPolymer3"
       description: "A place for cultured memes"
     notification_email: ramseymcgrath@gmail.com
-    build_command: "polymer build"
+    build_command: "cd Memeservices && polymer build"
     branch_pattern: coverity_scan
 
-script: if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then polymer build; fi
+script: if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then cd Memeservices && polymer build; fi
