@@ -1,4 +1,4 @@
-# Memeservices Generation 3
+# Memeservices (Generation 3)
 
 [![Build Status](https://travis-ci.org/ramseymcgrath/MemeservicesPolymer3.svg?branch=master)](https://travis-ci.org/ramseymcgrath/MemeservicesPolymer3)
 
@@ -20,8 +20,6 @@ polymer serve
 ```
 
 ### Docker Start
-
-## Docker Container
 
 A Dockerfile is provided to build and host the application locally, exposing port 8081
 
