@@ -1,5 +1,7 @@
 # Memeservices Generation 3
 
+[![Build Status](https://travis-ci.org/ramseymcgrath/MemeservicesPolymer3.svg?branch=master)](https://travis-ci.org/ramseymcgrath/MemeservicesPolymer3)
+
 A newer, sleeker generation of the Memeservices API
 
 Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
