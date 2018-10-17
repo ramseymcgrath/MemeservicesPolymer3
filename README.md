@@ -16,6 +16,12 @@ npm install
 polymer serve
 ```
 
+### Docker Start
+
+## Docker Container
+
+A Dockerfile is provided to build and host the application locally, exposing port 8081
+
 ### Slowstart
 
 Otherwise: 
@@ -179,9 +185,7 @@ To deploy the app to your own Firebase project:
 4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment) with Firebase.
 
     ```
+
     firebase deploy
+
    ```
-
-## Docker Container
-
-A Dockerfile is provided to build and host the application locally as well, exposing port 8081
