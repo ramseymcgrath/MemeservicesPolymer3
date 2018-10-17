@@ -185,7 +185,5 @@ To deploy the app to your own Firebase project:
 4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment) with Firebase.
 
     ```
-
     firebase deploy
-
    ```
