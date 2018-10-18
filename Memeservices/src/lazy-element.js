@@ -19,6 +19,7 @@ class LazyElement extends PolymerElement {
     // The html helper function makes this easy.
     return html`
       <p>You like memes.</p>
+      <img src="https://firebasestorage.googleapis.com/v0/b/memeservices-4c685.appspot.com/o/Unforgivable1.PNG?alt=media&token=e96688cb-a925-4bcc-ab8a-1296dfdcb17f" style="border: none; width: 100%; alt="Unforgivable">
     `;
   }
 }
