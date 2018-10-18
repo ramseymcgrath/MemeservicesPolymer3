@@ -7,6 +7,16 @@ Online at [Memeservices.com](https://memeservices.com)
 
 Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
 
+## API Features
+
+### Unforgivagable (Future)
+
+An Endpoint will be provided to return random responses from the 'Unforgivable' Youtube series, users may request a ```he_was_like``` ```she_was_like``` or ```i_was_like``` quote, and a json response will be returned with a random quote from the desired variety.
+
+### Bait Memes (Future)
+
+A future feature will lazy load a random bait meme image  hosted in our meme database.
+
 ## Development and Deployment
 
 ### Quickstart
