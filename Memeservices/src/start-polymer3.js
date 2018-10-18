@@ -23,7 +23,7 @@ class StartPolymer3 extends PolymerElement {
         type: String,
         value: ''
       },
-      pie: {
+      memes: {
         type: Boolean,
         value: false,
         observer: 'toggleMemes'
