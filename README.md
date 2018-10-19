@@ -15,7 +15,7 @@ An Endpoint will be provided to return random responses from the 'Unforgivable' 
 
 ### Bait Memes (Future)
 
-A future feature will lazy load a random bait meme image  hosted in our meme database.
+A future feature will lazy load a random bait meme image hosted in our meme database.
 
 ## Development and Deployment
 
@@ -33,9 +33,9 @@ polymer serve
 
 A Dockerfile is provided to build and host the application locally, exposing port 8081
 
-### Slowstart
+### Slowstart 
 
-Otherwise: 
+To setup your own development environment use the following instructions (based off of the Polymer 3 base)
 
   1.  [Set up a development environment for Polymer projects](#setup):
         * [Install Polymer CLI prerequisites](#installprerequisites).
@@ -77,8 +77,9 @@ To clone the project, install its dependencies, and serve locally:
 
 ```
 git clone https://github.com/RamseyMcGrath/MemeservicesPolymer3.git
-cd start-polymer3
+cd Memeservices
 npm install
+polymer build
 polymer serve
 ```
 
@@ -95,9 +96,9 @@ In the example above, you'd open http://127.0.0.1:8081.
 
 <a name="build"></a>
 
-#### Build the start-polymer3 project for production
+#### Build the project for production
 
-To build the `start-polymer3` app: 
+To build the `Memeservices` app: 
 
 ```
 npm install
@@ -115,7 +116,7 @@ polymer serve
 
 #### Deploy the Memeservices API
 
-You can deploy a built Polymer app to any web server. One way is to deploy with Firebase:
+You can deploy a built Polymer app to any web server. One way is to deploy with Firebase (Recommended):
 
 <a name="firebase"></a>
 
@@ -147,6 +148,8 @@ To deploy the app to your own Firebase project:
     * **specify a `public` directory**, you can enter `build/es6-unbundled` to deploy the build configuration supplied with this sample project.
     * **configure as a single-page app**, enter `Y`. 
     * **overwrite `index.html`**, enter `N`.
+
+    From the Firebase console you may also upload your memes to storage, or use another file hosting service of your choice. Just be sure to update the image URLs used in the project, along with the read permissions for the image files.
 
 4.  In a text editor, open `firebase.json` from your root project folder.
 
@@ -193,8 +196,12 @@ To deploy the app to your own Firebase project:
     }
     ```
 
+
 4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment) with Firebase.
 
     ```
     firebase deploy
-   ```
+    ```
+
+
+
