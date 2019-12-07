@@ -1,9 +1,9 @@
 {
   "name": "memeservices",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "main": "src/start-polymer3.js",
-  "repository": "https://github.com/PolymerLabs/start-polymer3.git",
-  "author": "The Polymer Project Authors",
+  "repository": "https://github.com/RamseyMcGrath/MemeservicesPolymer3.git",
+  "author": "Ramsey McGrath",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@polymer/paper-checkbox": "latest",

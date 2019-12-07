@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memeservices
+  labels:
+    name: memeservices
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: memeservices
+  template:
+    metadata:
+      labels:
+        app: memeservices
+    spec:
+      containers:
+      - name: memeservices
+        image: node
+        ports:
+        - containerPort: 8081
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: memeservices-service
+spec:
+  selector:
+    app: memeservices
+  ports:
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: 8081
+
+---
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: memeservices-hpa
+  annotations:
+    name: memeservices
+    namespace: memeservices
+spec:
+  maxReplicas: 5
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1
+    kind: Deployment
+    name: memeservices-deployment-scaler
+  targetCPUUtilizationPercentage: 1

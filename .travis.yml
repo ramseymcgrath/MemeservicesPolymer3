@@ -13,11 +13,20 @@ notifications:
   slack: the-famgroup:Anu81TpnQLMqJASGmiDtHyLg
 
 before_install:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
   - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 install:
   - npm install -g polymer-cli
   - npm install -g firebase-tools
+  - npm install googleapis
+
+dockerBuild:
+  - docker build -t Dockerfile -t memeservices.latest
+  - docker push ramseymcgrath/memeservicesapp:latest
 
 
 addons:
