@@ -21,8 +21,7 @@ class MyView1 extends PolymerElement {
         }
       </style>
       <div class="card">
-        <div class="circle">1</div>
-        <h1>View One</h1>
+        <h1>Home</h1>
         <p>Site rebuild in-progress. major enchancements coming soon.</p>
       </div>
     `;

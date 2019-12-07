@@ -21,7 +21,6 @@ class MyView3 extends PolymerElement {
         }
       </style>
       <div class="card">
-        <div class="circle">3</div>
         <h1>Bait Memes</h1>
         <p>Coming soon, a dedicated page for curated bait memes</p>
       </div>

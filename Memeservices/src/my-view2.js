@@ -21,7 +21,6 @@ class MyView2 extends PolymerElement {
         }
       </style>
       <div class="card">
-        <div class="circle">2</div>
         <h1>Unforgivable Memes</h1>
         <p>Coming soon, a seperate page for Unforgivable-series memes</p>
       </div>
