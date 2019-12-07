@@ -3,8 +3,8 @@
     "short_name": "Memeservices 😎",
     "description": "Home of gourmet memes",
     "start_url": "/",
-    "background_color": "#9CA3AF",
-    "theme_color": "#E8ECEF",
+    "theme_color": "#3f51b5",
+    "background_color": "#3f51b5",
     "icons": [{
       "src": "icon-256.png",
       "sizes": "256x256",
