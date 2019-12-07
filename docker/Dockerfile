@@ -1,4 +1,4 @@
-FROM node:latest-alpine
+FROM node:latest-slim
 
 # Copy App code into containter
 COPY build/* /usr/src/app
