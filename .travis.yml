@@ -26,11 +26,11 @@ install:
   - npm install googleapis
 
 script:
-  - cd Memeservices
+  - cd Memeservices 
   - npm install
   - polymer lint
   - polymer build
-  - cp build/es6-unbundled ../docker/build
+  - cp build/es6-bundled ../docker/build
 
 dockerBuild:
   - cd docker && docker build -t Dockerfile -t memeservices.latest
