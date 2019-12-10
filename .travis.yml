@@ -30,7 +30,7 @@ script:
   - npm install
   - polymer lint
   - polymer build
-  - cp build/es6-bundled ../docker/build
+  - mv build/es6-bundled ../docker/build
 
 dockerBuild:
   - cd docker && docker build -t Dockerfile -t memeservices.latest
