@@ -30,7 +30,7 @@ script:
   - npm install
   - polymer lint
   - polymer build
-  - mv build/es6-bundled ../docker/Release
+  - cp -R build/es6-bundled ../docker/Release
 
 dockerBuild:
   - cd docker && docker build . memeservicesapp:4.0S
