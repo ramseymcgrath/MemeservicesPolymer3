@@ -30,12 +30,6 @@ script:
   - npm install
   - polymer lint
   - polymer build
-  - cp -R build/es6-bundled ../docker/Release
-
-dockerBuild:
-  - cd docker && docker build . memeservicesapp:4.0S
-  - docker push ramseymcgrath/memeservicesapp:latest
-
 
 addons:
   coverity_scan:
