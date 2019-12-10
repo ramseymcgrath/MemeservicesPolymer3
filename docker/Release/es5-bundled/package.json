@@ -1,0 +1,46 @@
+{
+  "name": "memeservices",
+  "version": "4.0.0",
+  "main": "src/my-app.js",
+  "repository": "https://github.com/RamseyMcGrath/MemeservicesPolymer3.git",
+  "author": "Ramsey McGrath",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "start": "polymer serve",
+    "build": "polymer build",
+    "lint": "polymer lint",
+    "test": "polymer test",
+    "test:integration": "polymer build # test that psk builds without error with the CLI"
+  },
+  "dependencies": {
+    "@polymer/app-layout": "^3.0.0",
+    "@polymer/app-route": "^3.0.0",
+    "@polymer/iron-flex-layout": "^3.0.0",
+    "@polymer/iron-iconset-svg": "^3.0.0",
+    "@polymer/iron-media-query": "^3.0.0",
+    "@polymer/iron-pages": "^3.0.0",
+    "@polymer/iron-selector": "^3.0.0",
+    "@polymer/paper-icon-button": "^3.0.0",
+    "@polymer/polymer": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "ajv": "^6.10.2",
+    "ajv-keywords": "^3.4.1",
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "npm": "^6.13.2",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {
+    "polymer-cli": "^1.7.1",
+    "wct-browser-legacy": "^1.0.0",
+    "set-value": ">=2.0.1"
+  },
+  "engines": {
+    "node": ">=8.0"
+  }
+}
