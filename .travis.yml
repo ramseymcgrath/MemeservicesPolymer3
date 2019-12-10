@@ -33,7 +33,7 @@ script:
   - mv build/es6-bundled ../docker/build
 
 dockerBuild:
-  - cd docker && docker build -t Dockerfile -t memeservices.latest
+  - cd docker && docker build . memeservicesapp:4.0
   - docker push ramseymcgrath/memeservicesapp:latest
 
 

@@ -1,4 +1,4 @@
-FROM node:latest-slim
+FROM node:latest
 
 # Copy App code into containter
 COPY build/* /usr/src/app
