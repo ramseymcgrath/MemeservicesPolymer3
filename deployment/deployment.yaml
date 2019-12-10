@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: memeservices
-        image: node:slim
+        image: ramseymcgrath/memeservicesapp:latest
         ports:
         - containerPort: 8081
 
