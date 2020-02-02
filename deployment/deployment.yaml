@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: memeservices
-        image: node:slim
+        image: ramseymcgrath/memeservicesapp:latest
         ports:
         - containerPort: 8081
 
@@ -30,10 +30,21 @@ spec:
   selector:
     app: memeservices
   ports:
-  - name: https
-    protocol: TCP
-    port: 443
-    targetPort: 8081
+  - protocol: TCP
+    port: 8443
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: unforgivable-service
+spec:
+  selector:
+    app: memeservices
+  ports:
+  - protocol: TCP
+    port: 8444
 
 ---
 
@@ -52,3 +63,28 @@ spec:
     kind: Deployment
     name: memeservices-deployment-scaler
   targetCPUUtilizationPercentage: 1
+
+---
+
+kind: Ingress
+apiVersion: networking.k8s.io/v1beta1
+metadata:
+  name: memeservices-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /memeservices
+        backend:
+          serviceName: memeservices-service
+          servicePort: 8443
+      - path: /unforgivable
+        backend:
+          serviceName: unforgivable-service
+          servicePort: 8444
+      - http:
+        backend:
+          serviceName: memeservices-service
+          servicePort: 8443
