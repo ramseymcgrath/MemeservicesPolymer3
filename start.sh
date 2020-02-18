@@ -5,5 +5,4 @@ sudo mkdir -p /usr/src/app
 cd /usr/src/app
 git clone https://github.com/ramseymcgrath/MemeservicesPolymer3.git
 
-cd docker
 build/*
