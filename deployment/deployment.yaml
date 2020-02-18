@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: memeservices
-        image: ramseymcgrath/memeservicesapp:latest
+        image: ramseymcgrath/memeservicesapp:4.0.1
         ports:
         - containerPort: 8081
 

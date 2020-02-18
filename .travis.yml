@@ -8,10 +8,6 @@ env:
    # Encrypted COVERITY_SCAN_TOKEN
    - secure: "oeiyIQlPF/95CFqQnPzn05Jp/gzd7zA1DDEr4yHihDhdI+zV0cPpet8YwFInZvYtuEWLodcS2qIx8j0OvXMJk35zLobxGVUB2Tk1TuJgCYeYIb5oj6AP7dke50+GuAyC50exBUd3vcLwtLkRdzX4bIA3BopdOZAJ3l5k4EjZytCEuoiR1k379FRY6cPe1FJUfZsWlpUZiLIWK33r7u4OX9GwzS/agHPS9TLmkDOuA4Qbhjpc1qQj7Rr7D906sjP3BnIoYE0Q9dY2WufHbCpYyFjI+9dFfgh5NIPedm9gegKPxECco2K+NR7JWmZtHH1XetQs2eXY3FKxMJfnPArQw8r5ur8cu6g9zJoGWaQyPS7t+ISs/ERog+mYz30t218sOwo2FdQRSKXfaSxhqtzSeFtEotIM0HUhPx0KZiFifqbrfcrjPyxwn3jpwJIG5KD3IyAuakTfw2PxuzwiMMmkw4Ot1RCbvLUcYEi8MoqOxf2hErEj7PsZH7qFOKknfcnvNM+0ITKFbYIKGrIyYQzdFF916BeFJZQGX37wTbf+fbrysPE1RjOzthhhGlh7P30by5nCld0EIlkthMia0CgmLNeqaMGSd5/DfcyILCEMrXel96uCJlaZ2FYZI7rmeUoBxtbZl42TSHyCJPEV8E+8dNxfeyAsPXO9P+FslHl1HdA="
 
-notifications:
-  # Encrypted SLACK_TOKEN
-  slack: the-famgroup:Anu81TpnQLMqJASGmiDtHyLg
-
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -24,10 +20,11 @@ install:
   - npm install -g firebase-tools
   - npm install googleapis
 
-dockerBuild:
-  - docker build -t Dockerfile -t memeservices.latest
-  - docker push ramseymcgrath/memeservicesapp:latest
-
+script:
+  - cd Memeservices 
+  - npm install
+  - polymer lint
+  - polymer build
 
 addons:
   coverity_scan:
@@ -38,4 +35,4 @@ addons:
     build_command: "cd Memeservices && polymer build"
     branch_pattern: coverity_scan
 
-script: if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then cd Memeservices && polymer build; fi
+#script: if [ "${COVERITY_SCAN_BRANCH}" != 1 ]; then cd Memeservices && polymer build; fi
