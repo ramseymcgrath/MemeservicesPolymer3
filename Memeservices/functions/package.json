@@ -18,7 +18,7 @@
     "@google-cloud/promisify": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.0",
+    "eslint": "^9.32.0",
     "eslint-plugin-promise": "^3.6.0"
   },
   "private": true
